@@ -7,6 +7,7 @@ class Block:
         self.previous_hash = previous_hash
         self.timestamp = timestamp
         self.hash = self.get_hash()
+        self.nounce = 0
 
     def get_hash(self):
         header_bin = (str(self.previous_hash)+str(self.data)+str(self.timestamp)).encode()
